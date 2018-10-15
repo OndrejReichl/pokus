@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Životopis</title>
+    <style>
+        h1 {color: red; font-family: "Times New Roman"; }
+        #identita {alignment: top; padding-bottom: 50px}
+        h2{color: orange; font-style: oblique}
+        body{background-color: cyan}
+        p{padding-left: 10px}
+        #foto{display: inline; width: 90%; height: 90%}
+        #udaje
+        {
+            list-style-type: none;
+            margin: 0;
+            text-align: right;
+            padding-bottom: 40px;
+            padding-right: 5px
+        }
+        main{padding-left: 20px}
+        input{background-color: red; color: white; }
+        #zajmy{display: none}
+    </style>
+</head>
+<body>
+<table style="background-color: white">
+    <tr>
+        <td>
+            <img id="foto" src="img/user2.png">
+        </td><td style="background-color: white">
+        <div id="identita">
+            <h1>
+                Ondřej Reichl
+            </h1>
+
+            <h2>Student Informatiky</h2>
+        </div>
+    </td><td style="background-color: white">
+        <p >
+        <ul id="udaje">
+            <li><b>Email:</b> realdonaldtrump@yahoo.com</li>
+            <li><b>Telefon:</b> 234 545 422</li>
+            <li><b>Adresa:</b> Dolní Roveň 206</li>
+            <li>Dolní Roveň, 533 71</li>
+        </ul>
+        </p></td>
+    </tr>
+</table>
+<main>
+    <h2>Vzdělání</h2>
+    <p>2010-2015 Gymnázium Dr. E. Holuba, Holice</p>
+    <p>2007-2010 Zákládní škola Holubova 46, Holice v Č.</p>
+    <p>2001-2007 Masarykova základní škola, Dolní Roveň</p>
+    <h2>Praxe</h2>
+    <p>2018 MEDIA SERVIS- Doručovatel tisku</p>
+    <p>2017 Zeman a. s.- Prodejce</p>
+    <p>2016 Nemocnice HK- IT Servis</p>
+    <h2>Počítačové znalosti</h2>
+    <p>Java</p>
+    <p>C, C++, C#</p>
+    <p>Oracle SQL, MySQL</p>
+    <h2>Jazykové dovednosti
+        <input value="+" type="button" id="button1" onclick="showStuff('lang','button1')" >
+    </h2>
+    <div id="lang" style="display: none">
+        <p>Angličtina B2</p>
+        <p>Španělština B1</p>
+        <p>Němčina A2</p>
+    </div>
+    <h2>Průkaz</h2>
+    <p>Řidičský průkaz skupiny B</p>
+    <h2>Zájmy
+        <input value="+" type="button" id="button2" onclick="showStuff('zajmy',this)" >
+    </h2>
+    <p id="zajmy">Kynologie, čtení, lyžování</p>
+</main>
+<script>
+    function showStuff(id, button) {
+        if(document.getElementById(id).style.display == "none"){
+            document.getElementById(id).style.display = "block";
+            document.getElementById(button).value = "-";
+        }
+        else {
+            document.getElementById(id).style.display = "none";
+            document.getElementById(button).value = "+";
+        }
+
+    }
+</script>
+</body>
+</html>
